@@ -1,6 +1,6 @@
 {
   "name": "loader-css",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Load external css in browsers",
   "main": "index.js",
   "scripts": {
