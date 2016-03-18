@@ -1,0 +1,35 @@
+{
+  "name": "loader-css",
+  "version": "0.0.0",
+  "description": "Load external css in browsers",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint *.js 'lib/**/*.js' test/*.js bin/*.js",
+    "test-browser": "browserify test/*.js > test/fixtures/bundle.js && open test/fixtures/index.html",
+    "dist": "browserify index.js --standalone Loader | tee dist/loader.js | uglifyjs -m > dist/loader.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loaderjs/loader-css.git"
+  },
+  "keywords": [
+    "loader",
+    "css"
+  ],
+  "author": "zoubin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loaderjs/loader-css/issues"
+  },
+  "homepage": "https://github.com/loaderjs/loader-css#readme",
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "tape": "^4.5.1",
+    "browserify": "^13.0.0",
+    "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "loader-core": "^0.1.0"
+  }
+}
